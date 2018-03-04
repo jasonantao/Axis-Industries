@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Axys</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		{% load static %}
+			<link rel="stylesheet" href="{% static 'app/skel.css' %}" />
+			<link rel="stylesheet" href="{% static 'app/style.css' %}" />
+			<link rel="stylesheet" href="{% static 'app/style-xlarge.css' %}" />
+	</head>
+	<body class="landing">
+
+		<!-- Header -->
+			<header id="header">
+				<img src="{% static 'app/logo.png' %}" class="logo-pl" href="index.html" style="width:60px; height:auto;">
+				<nav id="nav" style="display:inline; top: 50px;">
+					
+						<a href="{% url 'profile-detail' profile_id=2 %}" class="button special nav-link">Hello, John</a>
+						
+				</nav>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2 class="header"><span style="color:black">Looking for collaborative projects?</span></h2>
+				<p class="subheader" style="color:black">Collaborate with designers and developers to create intuitive solutions and <br> meaningful products that will jumpstart your career.</p>
+				<ul class="actions">
+					<li>
+						<a class="typeform-share button" href="https://jason1004.typeform.com/to/TFY0Ku" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#DE2152;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:24px;line-height:60px;text-align:center;margin:0;height:60px;padding:0px 40px;border-radius:30px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-hide-headers=true data-hide-footer=true target="_blank">Get Started </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+					</li>
+				</ul>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper style1 special">
+				<div class="container">
+					<header class="major">
+						<h2 class="white">About Us</h2>
+						<p class="white">We provide a platform where young and inexperienced designers and developers can connect and work on portfolio-worthy projects with the intention of self-improving and creating long-lasting collaborative relationships.</p>
+					</header>
+					<div class="row 150%">
+						<div class="4u 12u$(medium)">
+							<section class="box">
+								<i class="icon big rounded color1 fa-cloud"></i>
+								<h3>Search for projects you're interested in</h3>
+								<p>Axys allows you to find postings easily which relate to the skills and topics that interest you.</p>
+							</section>
+						</div>
+						<div class="4u 12u$(medium)">
+							<section class="box">
+								<i class="icon big rounded color6 fa-rocket"></i>
+								<h3>Gain experience working with teams</h3>
+								<p>Communicating with others is a valuable skill to have, especially in the creative industry. Use Axys as a platform to get comfortable working in teams.</p>
+							</section>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<section class="box">
+								<i class="icon big rounded color9 fa-desktop"></i>
+								<h3>Network and make valuable connections</h3>
+								<p>Meet others with similar interests and learn from the people you meet while collaborating on projects.</p>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<section class="links">
+						<div class="row">
+							<section class="3u 6u(medium) 12u$(small)">
+								<h3>AXYS</h3>
+								<p class="white">is a platform for young designers and developers to connect and work on projects to strengthen their specialties and experience. <br> <br>&copy; AXYS 2018</p>
+							</section>
+							
+						
+						
+						</div>
+					</section>
+					
+
+	</body>
+</html>

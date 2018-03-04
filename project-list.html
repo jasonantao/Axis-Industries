@@ -1,0 +1,87 @@
+<!-- Updated Table -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Axys</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+        {% load static %}
+		<noscript>
+			<link rel="stylesheet" href="{% static 'app/skel.css' %}" />
+			<link rel="stylesheet" href="{% static 'app/style.css' %}" />
+			<link rel="stylesheet" href="{% static 'app/style-xlarge.css' %}" />
+		</noscript>
+	</head>
+    <body>
+{% for project in project_list %}
+    <section>
+        <h3>Table</h3>
+        <h4>Alternate</h4>
+        <div class="table-wrapper" >
+            <table class="alt">
+                <thead>
+                    <tr>
+                        <th style="width:200px;">Name: </th>
+                        <th>{{ project.name }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width:200px;">Description: </td>
+                        <td>{{ project.description }}</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td style="width:200px;">Owner: </td>
+                        <td>{{ project.owner.first_name }}</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td style="width:200px;">Specialities Needed: </td>
+                        <td>{% for role in project.specialities_needed %}
+                            <span>{{ role }}, </span>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td style="width:200px;">Complexity: </td>
+                        <td>{{ project.complexity }}</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td style="width:200px;">View</td>
+                        <td><a href="{% url 'project-detail' project_id=project.id %}"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endfor %}
+
+<footer id="footer">
+				<div class="container">
+					<section class="links">
+						<div class="row">
+							<section class="3u 6u(medium) 12u$(small)">
+								<h3>AXYS</h3>
+								<p class="white">is a platform for young designers and developers to connect and work on projects to strengthen their specialties and experience. <br> <br>&copy; AXYS 2018</p>
+							</section>
+
+
+
+						</div>
+					</section>
+                </div></footer></body></html>
+
